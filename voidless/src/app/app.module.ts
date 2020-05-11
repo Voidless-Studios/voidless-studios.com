@@ -9,12 +9,17 @@ import { DarkHeaderComponent } from './components/header/dark-header/dark-header
 import { DarkFooterComponent } from './components/footer/dark-footer/dark-footer.component';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 
+// Pages
+import { HomeComponent } from './pages/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     DarkHeaderComponent,
     DarkFooterComponent,
-    SubscribeComponent
+    SubscribeComponent,
+
+    HomeComponent
   ],
   imports: [
     BrowserModule,
