@@ -1,0 +1,36 @@
+.btn.btn-theme {
+	padding: rem(15px) rem(30px);
+	font-weight: 600;
+	
+	@include border-radius($border-radius);
+}
+.btn-default {
+	@include button-variant(lighten($silver, 20%), lighten($silver, 20%), $silver, $silver, $silver, $silver);
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value, darken($value, 7.5%), darken($value, 7.5%), darken($value, 10%), darken($value, 10%));
+    
+    @if $color == 'warning' or $color == 'info' {
+    	color: $white;
+    }
+  }
+}
+
+
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value, darken($value, 7.5%), darken($value, 7.5%), darken($value, 10%), darken($value, 10%));
+    
+    @if $color == 'orange' or $color == 'aqua' or $color == 'lime' {
+    	color: $white;
+    }
+    @if $color == 'lime' {
+    	&:hover,
+    	&:focus {
+    		color: $white;
+    	}
+    }
+  }
+}

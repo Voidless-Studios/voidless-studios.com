@@ -1,0 +1,35 @@
+.progress {
+	overflow: initial;
+	
+	@include border-radius($border-radius-lg * 2);
+	
+	& .progress-bar {
+		position: relative;
+		
+		@include border-radius($border-radius-lg * 2);
+		
+		
+		& .progress-number {
+			position: absolute;
+			right: 0;
+			bottom: 100%;
+			background: $dark;
+			padding: rem(2px) rem(6px) rem(1px);
+			display: block;
+			line-height: rem(16px);
+			margin-bottom: rem(5px);
+	
+			@include border-radius($border-radius);
+	
+			&:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				margin-left: rem(-5px);
+				bottom: rem(-10px);
+				border: 5px solid transparent;
+				border-top-color: #333;
+			}
+		}
+	}
+}

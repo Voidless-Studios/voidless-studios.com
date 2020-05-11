@@ -1,0 +1,7 @@
+.contentAnimated {
+	@include animation-duration(1.5s !important);
+	@include animation-fill-mode(both !important);
+}
+.finishAnimated {
+	@include animation(none !important);
+}

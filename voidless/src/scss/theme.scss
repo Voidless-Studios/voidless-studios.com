@@ -1,0 +1,130 @@
+@import 'functions';
+@import 'variables';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'mixins';
+
+a {
+	color: $primary;
+
+	&:hover,
+	&:focus {
+		color: darken($primary, 15%);
+	}
+}
+.pace {
+	& .pace-progress {
+		background: $primary !important;
+	}
+	& .pace-activity {
+		border-top-color: $primary !important;
+		border-left-color: $primary !important;
+	}
+}
+.header {
+	& .navbar-nav {
+		& .nav-item {
+			& .nav-link {
+				&:hover,
+				&.active {
+					color: $primary !important;
+				}
+			}
+		}
+	}
+	& .navbar-brand {
+		& .brand-logo {
+			@if $primary-color == 'black' {
+				border-color: lighten($primary, 40%) lighten($primary, 20%) $primary;
+			} @else if $primary-color == 'dark' {
+				border-color: lighten($primary, 20%) lighten($primary, 10%) $primary;
+			} @else {
+				border-color: $primary darken($primary, 10%) darken($primary, 20%);
+			}
+		}
+	}
+}
+.text-primary {
+	@if $primary-color == 'black' {
+		color: lighten($primary, 45%) !important;
+	} @else {
+		color: $primary !important;
+	}
+}
+.bg-theme {
+	background-color: $primary !important;
+}
+.home {
+	& .home-content {
+		& a:not(.btn) {
+			@if $primary-color == 'black' {
+				color: lighten($primary, 75%);
+			} @else {
+				color: $primary;
+			}
+	
+			&:hover,
+			&:focus {
+				@if $primary-color == 'black' {
+					color: lighten($primary, 90%);
+				} @else {
+					color: darken($primary, 15%);
+				}
+			}
+		}
+	}
+}
+.pricing-table {
+	& .price {
+		& .price-number {
+			@if $primary-color == 'black' {
+				color: $white;
+			} @else {
+				color: $primary;
+			}
+		}
+	}
+	& .highlight {
+		& h3 {
+			background: darken($primary, 8%);
+		}
+		& .price {
+			@if $primary-color == 'black' {
+				background: lighten($primary, 15%);
+			} @else {
+				background: $primary;
+			}
+			
+			& .price-number {
+				color: $white;
+			}
+		}
+	}
+}
+.footer {
+	& .footer-brand-logo {
+		border-color: $primary darken($primary, 10%) darken($primary, 20%);
+	}
+	& a {
+		color: $primary;
+
+		&:hover,
+		&:focus {
+			color: darken($primary, 15%);
+		}
+	}
+}
+.btn-primary {
+	@include button-variant($primary, $primary, darken($primary, 7.5%), darken($primary, 7.5%), darken($primary, 10%), darken($primary, 10%));
+	
+	@if $primary-color == 'orange' or $primary-color == 'aqua' or $primary-color == 'lime' {
+		color: $white;
+	}
+	@if $primary-color == 'lime' {
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+}

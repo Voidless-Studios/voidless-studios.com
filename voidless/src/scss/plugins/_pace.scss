@@ -1,0 +1,19 @@
+.pace {
+	& .pace-progress {
+		height: rem(3px) !important;
+		background: $primary !important;
+		
+		& .pace-progress-inner {
+			@include box-shadow(none);
+		}
+	}
+	& .pace-activity {
+		top: rem(22px) !important;
+		right: rem(22px) !important;
+		width: rem(20px) !important;
+		height: rem(20px) !important;
+		border: solid rem(3px) transparent !important;
+    border-top-color: $primary !important;
+    border-left-color: $primary !important;
+	}
+}

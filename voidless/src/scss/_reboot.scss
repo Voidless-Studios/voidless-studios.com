@@ -1,0 +1,14 @@
+body {
+	letter-spacing: $body-letter-spacing;
+	-webkit-font-smoothing: antialiased;
+	
+	&.page-navbar-fixed-top {
+		padding-top: rem(70px);
+	}
+	&.page-navbar-fixed-top-sm {
+		padding-top: rem(51px);
+	}
+}
+p {
+	font-size: $font-size-sm;
+}
