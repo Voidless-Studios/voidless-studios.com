@@ -16,6 +16,34 @@ const routes: Routes = [
     data: {
       title: 'Home'
     }
+  },
+  {
+    path: 'games',
+    component: HomeComponent,
+    data: {
+      title: 'Games'
+    }
+  },
+  {
+    path: 'media',
+    component: HomeComponent,
+    data: {
+      title: 'Media'
+    }
+  },
+  {
+    path: 'team',
+    component: HomeComponent,
+    data: {
+      title: 'Team'
+    }
+  },
+  {
+    path: 'contact',
+    component: HomeComponent,
+    data: {
+      title: 'Contact'
+    }
   }
 ];
 
