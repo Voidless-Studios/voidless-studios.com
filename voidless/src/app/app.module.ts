@@ -12,6 +12,11 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
+import { GamesComponent } from './pages/games/games.component';
+import { MediaComponent } from './pages/media/media.component';
+import { TeamComponent } from './pages/team/team.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,13 @@ import { HomeComponent } from './pages/home/home.component';
     DarkFooterComponent,
     SubscribeComponent,
 
-    HomeComponent
+    NotFoundComponent,
+
+    HomeComponent,
+    GamesComponent,
+    MediaComponent,
+    TeamComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
